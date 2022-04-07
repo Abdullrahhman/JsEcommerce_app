@@ -1,0 +1,285 @@
+header {
+  background-color: rgb(116, 116, 116);
+}
+
+header ul {
+  transform: translate(0, 50%);
+}
+
+header ul a {
+  display: flex;
+}
+
+* {
+  text-transform: capitalize;
+}
+
+#links {
+  position: relative;
+  bottom: 13px;
+}
+
+/* ~ products */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.products {
+  width: 100%;
+  margin: 100px 0;
+}
+
+.product-item {
+  display: flex;
+  min-width: 100%;
+  margin: 20px 0;
+  border: 1px solid black;
+  position: relative;
+}
+
+.product-item-img {
+  width: 200px;
+  object-fit: cover;
+  margin-right: 13px;
+}
+
+.product-item-desc a {
+  cursor: pointer;
+  text-decoration: underline;
+  display: block;
+  font-size: 22px;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #333;
+}
+
+.product-item-desc p {
+  margin-bottom: 5px;
+}
+
+.product-item-desc span {
+  /* position: absolute; */
+  bottom: 0;
+  margin-bottom: 5px;
+}
+
+.product-item-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 5px 5px;
+}
+
+.product-item-actions i {
+  margin-right: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px 5px;
+  transition: 0.2s ease all;
+}
+
+.product-item-actions i:hover {
+  transform: translate(15%, 15%);
+  font-size: 23px;
+  color: red;
+}
+
+.add-to-cart {
+  background: rgba(163, 163, 163, 0.411);
+  border: none;
+  padding: 10px;
+  min-width: 30px;
+  transition: 0.2s ease all;
+  position: absolute;
+  margin-right: 5px;
+  right: 0;
+}
+
+.add-to-cart:hover {
+  background: rgb(182, 182, 182);
+}
+
+.banner img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.banner {
+  position: relative;
+  width: 70%;
+  z-index: -1;
+}
+
+.scrolls {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 50%;
+  margin: 0 10px;
+  color: white;
+  opacity: 0;
+  margin: 0 40px;
+  transition: 0.2s ease all;
+}
+
+.scroll-left,
+.scroll-right {
+  background: grey;
+  padding: 17px;
+  transition: 0.2s ease all;
+  cursor: pointer;
+}
+
+.scroll-left:hover,
+.scroll-right:hover {
+  background: #000;
+}
+
+.banner:hover .scrolls {
+  margin: 0 10px;
+  opacity: 1;
+}
+
+.badge {
+  display: none;
+  position: absolute;
+  background: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  bottom: 17px;
+  left: 22px;
+  color: white;
+}
+
+.carts-products {
+  display: none;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  position: absolute;
+  background: rgb(168, 168, 168);
+  width: 200px;
+  top: 45px;
+  transform: translate(-35%, 0);
+  box-shadow: 0px 20px 50px rgb(0, 0, 0);
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+.carts-products a {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  border-top: 1px solid black;
+  color: #000;
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+.carts-products div p {
+  margin: 5px 0;
+  border-top: 1px solid black;
+}
+
+#search {
+  display: block;
+  top: 74px;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: lightgrey;
+  border: none;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.qty {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container,
+  .banner {
+    width: 95%;
+  }
+}
+
+#seller-filter {
+  padding: 4px;
+  position: relative;
+  bottom: 0;
+  border: none;
+  background: lightgrey;
+  color: #757575;
+  border-radius: 5px;
+}
+
+.edit-btn {
+  background: rgba(163, 163, 163, 0.411);
+  border: none;
+  padding: 8.5px;
+  min-width: 30px;
+  transition: 0.2s ease all;
+  position: absolute;
+  margin-right: 5px;
+  right: 0px;
+  transition: 0.2s ease all;
+}
+
+.delete-btn {
+  background: rgba(163, 163, 163, 0.411);
+  border: none;
+  padding: 8.5px;
+  min-width: 30px;
+  transition: 0.2s ease all;
+  position: absolute;
+  margin-right: 5px;
+  margin-top: 40px;
+  right: 0px;
+  transition: 0.2s ease all;
+}
+
+.edit-btn:hover,
+.delete-btn:hover,
+.edit-btn2:hover {
+  background: rgb(182, 182, 182);
+}
+
+.edit-btn2 {
+  background: rgba(163, 163, 163, 0.411);
+  border: none;
+  padding: 8.5px;
+  min-width: 30px;
+  transition: 0.2s ease all;
+  margin-right: 5px;
+}
+
+.edit-long-btn {
+  height: 40px;
+  border: none;
+  background: rgb(197, 197, 197);
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.2s ease all;
+}
+.edit-long-btn:hover {
+  background: grey;
+  color: white;
+}
+
+#user {
+  text-decoration: underline;
+}

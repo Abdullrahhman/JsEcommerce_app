@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart || Home Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <link rel="stylesheet" href="stylesheet/index.css" />
+    <link rel="stylesheet" href="stylesheet/style-rtl.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="#" class="brand"> Steroids Pharma </a>
+
+          <nav>
+            <ul id="links">
+              <li><a href="login.html">SignIn</a></li>
+              <li><a href="register.html">SignUp</a></li>
+            </ul>
+            <ul id="user_info">
+              <li><a href="profile.html" id="user"></a></li>
+              <li><a href="favorites.html" id="fav">Favorites</a></li>
+              <li><a href="myProducts.html" id="fav">My Products</a></li>
+              <li id="en_lang">En</li>
+              <li id="ar_lang">Ar</li>
+              <li class="shoppingCart">
+                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                <span class="badge"></span>
+
+                <div class="carts-products">
+                  <div></div>
+                  <a href="cartproducts.html">View Products</a>
+                </div>
+              </li>
+              <li><a id="logout_btn" href="#">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="flex-container">
+      <div class="banner">
+        <img src="img/banner.jpg" alt="" />
+        <div class="scrolls">
+          <span class="scroll-left"
+            ><i class="fa-solid fa-arrow-left-long"></i
+          ></span>
+          <span class="scroll-right"
+            ><i class="fa-solid fa-arrow-right-long"></i
+          ></span>
+        </div>
+      </div>
+    </div>
+    <section class="home">
+      <div class="container">
+        <input type="text" id="search" placeholder="Search Steroids.." />
+        <div class="products-filter">
+          <select id="seller-filter">
+            <option hidden value="">Filter By Seller</option>
+            <option value="all">All</option>
+            <option value="seller: verified ✓">Verified</option>
+            <option value="seller: unverified">UnVerified</option>
+          </select>
+        </div>
+        <div class="products"></div>
+      </div>
+
+      <a href="createProduct.html" class="create-product"
+        ><i class="fa fa-plus"></i
+      ></a>
+    </section>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/cartMenu.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/langDir.js"></script>
+    <script src="js/cartMenu.js"></script>
+  </body>
+</html>

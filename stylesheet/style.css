@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  padding: 10px 20px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-content .brand {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}
+
+.header-content nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+ul li a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+/* !form */
+.section-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.section-form form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-form form::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.555);
+  filter: blur(2px);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.582);
+  height: 250%;
+  width: 150%;
+}
+
+.section-form input {
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.151);
+  font-size: 20px;
+  color: white;
+  width: 300px;
+  text-align: center;
+  z-index: 999;
+  transition: 0.2s ease all;
+  font-family: inherit;
+  padding: 3px;
+  outline: none;
+}
+
+.section-form input[type='email'] {
+  margin-bottom: 4px;
+}
+
+.section-form input:last-of-type {
+  margin-top: 15px;
+  color: grey;
+  transition: 0.2s ease all;
+}
+
+.section-form input:last-of-type:hover {
+  color: white;
+}
+
+.section-form input:first-of-type {
+  margin-bottom: 4px;
+}
+
+.title {
+  text-align: center;
+  transform: translate(0, -50%);
+  font-size: 33px;
+  color: rgb(167, 167, 167);
+  text-shadow: 0px 0px 10px rgb(167, 167, 167);
+}
+
+.section-form p {
+  text-align: center;
+  transform: translate(0, 50%);
+  color: rgb(167, 167, 167);
+}
+
+.section-form p a {
+  color: rgb(167, 167, 167);
+}
+
+/* username display UI */
+#links {
+  display: none;
+}
+
+#user_info li {
+  transform: translate(0, -50%);
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-details img {
+  margin-top: 20px;
+  object-fit: cover;
+  width: 100%;
+  border: 2px solid black;
+  height: 500px;
+}
+
+.item-details h2 {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.item-details span {
+  font-size: 22px;
+  margin-top: 20px;
+}
+
+.item-details h3 {
+  font-size: 20px;
+}
+
+/* CRUD System */
+.fa-plus {
+  position: fixed;
+  bottom: 45px;
+  right: 45px;
+  font-size: 24px;
+  padding: 15px;
+  color: white;
+  background: rgb(59, 19, 192);
+  transition: 0.2s ease all;
+  transform: translate(50%, 50%);
+  border-radius: 10%;
+}
+
+.fa-plus:hover {
+  box-shadow: 0px 0px 8px rgb(0, 0, 0);
+  color: black;
+  background: #fff;
+  border-radius: 50%;
+  font-size: 27px;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .product-item-desc a {
+    max-width: 170px;
+  }
+}
+
+.edit-btn {
+  display: block;
+}
+
+.user-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 10px 10px;
+}
+
+#edit-profile-form input {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  height: 40px;
+  border: none;
+  background-color: rgb(194, 194, 194);
+  border-radius: 10px;
+  transition: 0.2s ease all;
+  text-align: center;
+}
+
+#edit-profile-form input:hover {
+  color: white;
+  background: grey;
+  box-shadow: 0px 0px 4px rgb(0, 0, 0);
+}
+
+#edit-profile-form input::placeholder {
+  color: rgb(255, 255, 255);
+}
+
+.container-edit {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#email {
+  text-transform: lowercase;
+}
+
+.badge {
+  display: none;
+  position: absolute;
+  background: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  bottom: 17px;
+  left: 22px;
+  color: white;
+}
+
+#changeEmail {
+  text-transform: lowercase;
+}
+
+#ar_lang,
+#en_lang {
+  padding: 2px;
+  background: #ffffff59;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 2px;
+  height: 25px;
+}

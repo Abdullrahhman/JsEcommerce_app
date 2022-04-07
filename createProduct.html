@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart || Create Product</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <link rel="stylesheet" href="stylesheet/createProduct.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="brand"> Steroids Pharma </a>
+
+          <nav>
+            <ul id="links">
+              <li><a href="login.html">SignIn</a></li>
+              <li><a href="register.html">SignUp</a></li>
+            </ul>
+            <ul id="user_info">
+              <li><a href="profile.html" id="user"></a></li>
+              <li><a href="favorites.html" id="fav">Favorites</a></li>
+              <li class="shoppingCart">
+                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                <span class="badge"></span>
+
+                <div class="carts-products">
+                  <div></div>
+                  <a href="cartproducts.html">View Products</a>
+                </div>
+              </li>
+              <li id="en_lang">En</li>
+              <li id="ar_lang">Ar</li>
+              <li><a id="logout_btn" href="#">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="create-product-page">
+      <div class="container">
+        <h1 style="text-align: center; margin-top: 20px; font-size: 30px">
+          Create New Product
+        </h1>
+        <form id="create-form" action="">
+          <input type="file" class="inputfile" id="product-img" />
+          <label for="product-img">Select Image</label>
+          <input id="product-name" type="text" placeholder="Name Of Product" />
+          <input id="product-desc" type="text" placeholder="Description" />
+          <label for="product-price"></label>
+          <input
+            id="product-price"
+            type="text"
+            placeholder="price"
+            value="0$"
+          />
+          <select id="seller" name="" id="seller">
+            <option value="" hidden>Select Seller</option>
+            <option value="Vertified ✓">Verified</option>
+            <option value="Unverified">UnVerified</option>
+          </select>
+          <input type="submit" id="product-create-btn" name="" value="Create" />
+        </form>
+      </div>
+    </section>
+
+    <script src="js/user.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/langDir.js"></script>
+    <script src="js/createProducts.js"></script>
+  </body>
+</html>

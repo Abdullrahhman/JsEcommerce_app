@@ -1,0 +1,33 @@
+[dir='rtl'] .products {
+  float: left;
+}
+
+[dir='rtl'] .add-to-cart {
+  margin-left: 5px;
+  right: inherit;
+  left: 0;
+}
+
+[dir='rtl'] .product-item-desc a,
+[dir='rtl'] .product-item-desc p {
+  margin-right: 5px;
+  min-width: 70%;
+}
+
+[dir='rtl'] .product-item-img {
+  margin-right: 0;
+}
+
+[dir='rtl'] .fa-heart {
+  right: inherit;
+  position: absolute;
+  left: 0;
+}
+
+[dir='rtl'] .fa-heart:hover {
+  transform: translate(-10%, -10%);
+}
+
+[dir='rtl'] .carts-products {
+  transform: translate(47%, 0);
+}
