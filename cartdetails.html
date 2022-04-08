@@ -12,7 +12,9 @@ itemDom.innerHTML = `
         <p>${productDetails.desc}</p>
         <span>${productDetails.seller}</span>
         <h3>${productDetails.price}</h3>
-        <button style='display: ${productDetails.isMine === 'true' ? 'block' : 'none'}' class='edit-long-btn' onclick='editProduct(${prodcutId})'>Edit Product</button>
+        <button style='display: ${
+          productDetails.isMine === 'true' ? 'block' : 'none'
+        }' class='edit-long-btn' onclick='editProduct(${prodcutId})'>Edit Product</button>
         `;
 
 // this function colors the seller if it was verified or not.
