@@ -1,33 +1,63 @@
-let prodcuts = JSON.parse(localStorage.getItem('products')); // to get the data from the database
-let prodcutId = localStorage.getItem('productId'); // to catch the id of each product
-let itemDom = document.querySelector('.item-details'); // here where all the information displays
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart || Product Details</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="stylesheet/style.css" />
+    <link rel="stylesheet" href="stylesheet/index.css" />
+    <link rel="stylesheet" href="stylesheet/cartsproducts.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="brand"> Steroids Pharma </a>
 
-// here we get the data for the product we clicked on
-let productDetails = prodcuts.find(item => item.id == prodcutId);
+          <nav>
+            <ul id="links">
+              <li><a href="login.html">SignIn</a></li>
+              <li><a href="register.html">SignUp</a></li>
+            </ul>
+            <ul id="user_info">
+              <li><a href="profile.html" id="user"></a></li>
+              <li><a href="favorites.html" id="fav">Favorites</a></li>
+              <li><a href="myProducts.html" id="fav">My Products</a></li>
+              <li id="en_lang">En</li>
+              <li id="ar_lang">Ar</li>
+              <li class="shoppingCart">
+                <a href="#"><i class="fa-solid fa-cart-arrow-down"></i></a>
+                <span class="badge"></span>
 
-// here we display the data we got to the UI
-itemDom.innerHTML = `
-        <img src="${productDetails.imgUrl}" alt="" />
-        <h2>${productDetails.title}</h2>
-        <p>${productDetails.desc}</p>
-        <span>${productDetails.seller}</span>
-        <h3>${productDetails.price}</h3>
-        <button style='display: ${
-          productDetails.isMine === 'true' ? 'block' : 'none'
-        }' class='edit-long-btn' onclick='editProduct(${prodcutId})'>Edit Product</button>
-        `;
+                <div class="carts-products">
+                  <div></div>
+                  <a href="cartproducts.html">View Products</a>
+                </div>
+              </li>
+              <li><a id="logout_btn" href="#">Logout</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
 
-// this function colors the seller if it was verified or not.
-(function colorSeller() {
-  let seller = document.querySelector('.item-details span');
-  if (seller.innerHTML === 'seller: verified ✓') {
-    seller.style.color = 'green';
-  } else {
-    seller.style.color = 'red';
-  }
-})();
+    <section class="home">
+      <div class="container">
+        <div class="item-details"></div>
+      </div>
+    </section>
 
-function editProduct(id) {
-  localStorage.setItem('editProduct', id);
-  window.location = 'editProduct.html';
-}
+    <script src="js/user.js"></script>
+    <script src="js/cartMenu.js"></script>
+    <script src="js/cartDetails.js"></script>
+    <script src="js/langDir.js"></script>
+  </body>
+</html>
